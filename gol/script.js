@@ -1,6 +1,3 @@
-/**
- * Created by Sumi.Govindaraju20 on 3/6/2017.
- */
 var canvas, ctx;
 var generation = 0;
 var width = innerWidth, height = innerHeight;
