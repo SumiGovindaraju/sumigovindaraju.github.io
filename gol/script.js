@@ -1,15 +1,16 @@
 var canvas, ctx;
-var generation = 0;
 var width = innerWidth, height = innerHeight;
 var cellWidth = 8;
 var cellHeight = 8;
 var proportionalWidth = Math.floor(width/cellWidth);
 var proportionalHeight =  Math.floor(height/cellHeight);
 var block = new Array(proportionalWidth);
+var isPlay = true;
 for (var i = 0; i < proportionalWidth; i++) {
     block[i] = new Array(proportionalHeight);
 }
 window.addEventListener("load", function(e) {
+    alert(proportionalWidth + " by " + proportionalHeight);
     canvas = document.getElementById("can");
     canvas.width = width;
     canvas.height = height;
@@ -18,7 +19,7 @@ window.addEventListener("load", function(e) {
 });
 
 function init() {
-    console.log("init()");
+    alert("Press any key to pause/play.");
     for (var i = 0; i < proportionalWidth; i++) {
         for (var j = 0; j < proportionalHeight; j++) {
             if (Math.random() >= 0.5)
@@ -31,17 +32,18 @@ function init() {
 }
 
 function draw() {
-    console.log("draw()");
-    for (var i = 0; i < proportionalWidth; i++) {
-        for (var j = 0; j < proportionalWidth; j++) {
-            if (block[i][j])
-                ctx.fillStyle = "#000000";
-            else
-                ctx.fillStyle = "#ffffff";
-           ctx.fillRect(i*cellWidth, j*cellHeight, cellWidth, cellHeight);
+    if (isPlay) {
+        for (var i = 0; i < proportionalWidth; i++) {
+            for (var j = 0; j < proportionalWidth; j++) {
+                if (block[i][j])
+                    ctx.fillStyle = "#000000";
+                else
+                    ctx.fillStyle = "#ffffff";
+                ctx.fillRect(i * cellWidth, j * cellHeight, cellWidth, cellHeight);
+            }
         }
+        step();
     }
-    step();
 
     requestAnimationFrame(draw);
 }
@@ -52,9 +54,8 @@ function step() {
         blockNextGen[i] = new Array(proportionalHeight);
         for (var j = 0; j < proportionalHeight; j++) {
             var count = 0;
-            if (i >= 1 && j >= 1 && block[i - 1][j - 1]) {
+            if (i >= 1 && j >= 1 && block[i - 1][j - 1])
                 count++;
-            }
             if (j >= 1 && block[i][j - 1])
                 count++;
             if (i < (proportionalWidth - 1) && j >= 1 && block[i + 1][j - 1])
@@ -74,3 +75,12 @@ function step() {
     }
     block = blockNextGen;
 }
+
+window.addEventListener("keypress", function(e) {
+    isPlay = !isPlay;
+    console.log("Pressed Key")
+});
+
+window.addEventListener("click", function(e){
+    block[Math.floor(proportionalWidth*e.clientX/width)][Math.floor(proportionalHeight*e.clientY/height)] = !block[Math.floor(proportionalWidth*e.clientX/width)][Math.floor(proportionalHeight*e.clientY/height)];
+});
