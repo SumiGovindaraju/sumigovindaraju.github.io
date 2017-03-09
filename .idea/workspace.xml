@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e26a8b54-10b9-4273-b9a1-9c3031bf35fa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/koch/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/koch/script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/style.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aboutMe.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/design.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gol/script.js" afterPath="$PROJECT_DIR$/gol/script.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -41,8 +33,8 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gol/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="709">
-              <caret line="83" column="45" lean-forward="false" selection-start-line="83" selection-start-column="45" selection-end-line="83" selection-end-column="45" />
+            <state relative-caret-position="429">
+              <caret line="20" column="80" lean-forward="false" selection-start-line="20" selection-start-column="80" selection-end-line="20" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -273,18 +265,18 @@
       <workItem from="1488675843156" duration="193000" />
       <workItem from="1488852333757" duration="3342000" />
       <workItem from="1488987424360" duration="2053000" />
-      <workItem from="1489016550380" duration="7128000" />
+      <workItem from="1489016550380" duration="7382000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14935000" />
+    <option name="totallyTimeSpent" value="15189000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="2762" height="1770" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1253655" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1253655" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -706,8 +698,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gol/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="83" column="45" lean-forward="false" selection-start-line="83" selection-start-column="45" selection-end-line="83" selection-end-column="45" />
+        <state relative-caret-position="429">
+          <caret line="20" column="80" lean-forward="false" selection-start-line="20" selection-start-column="80" selection-end-line="20" selection-end-column="80" />
           <folding />
         </state>
       </provider>

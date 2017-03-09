@@ -10,7 +10,6 @@ for (var i = 0; i < proportionalWidth; i++) {
     block[i] = new Array(proportionalHeight);
 }
 window.addEventListener("load", function(e) {
-    alert(proportionalWidth + " by " + proportionalHeight);
     canvas = document.getElementById("can");
     canvas.width = width;
     canvas.height = height;
@@ -19,7 +18,7 @@ window.addEventListener("load", function(e) {
 });
 
 function init() {
-    alert("Press any key to pause/play.");
+    alert("Press any key to pause/play. Click on any cell to change change its status.");
     for (var i = 0; i < proportionalWidth; i++) {
         for (var j = 0; j < proportionalHeight; j++) {
             if (Math.random() >= 0.5)
