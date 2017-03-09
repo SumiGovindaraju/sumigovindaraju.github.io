@@ -6,10 +6,13 @@ body {
     width: 50%;
     margin:auto;
     background: #062F4F;
+    height: 10%;
 }
 
 #menu li {
     list-style: none;
+    display: inline;
+    padding-left: 30px;
 }
 
 #menu li a {

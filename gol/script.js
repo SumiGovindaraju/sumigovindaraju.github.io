@@ -1,4 +1,5 @@
 var canvas, ctx;
+var generation = 1;
 var width = innerWidth, height = innerHeight;
 var cellWidth = 8;
 var cellHeight = 8;
@@ -49,6 +50,7 @@ function draw() {
 
 function step() {
     var blockNextGen = new Array(proportionalWidth);
+    document.title = "Generation: " + generation;
     for (var i = 0; i < proportionalWidth; i++) {
         blockNextGen[i] = new Array(proportionalHeight);
         for (var j = 0; j < proportionalHeight; j++) {
@@ -73,6 +75,7 @@ function step() {
         }
     }
     block = blockNextGen;
+    generation++;
 }
 
 window.addEventListener("keypress", function(e) {
