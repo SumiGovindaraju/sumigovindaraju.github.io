@@ -2,20 +2,44 @@ body {
     background: #000000;
 }
 
-#menu {
+#menu ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
     width: 50%;
-    margin:auto;
-    background: #062F4F;
-    height: 10%;
 }
 
+#content {
+    //background-color: #f1f1f1;
+    width: 50%;
+    margin: auto;
+    color: #AED9E0;
+}
+
+#content a {
+    color: #AED9E0;
+}
+
+#content a:visited {
+    color: #AED9E0;
+}
 #menu li {
-    list-style: none;
-    display: inline;
-    padding-left: 30px;
+    float: left;
 }
 
 #menu li a {
-    color: #B82601;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
+    color: #AED9E0;
+}
+
+#menu li a:visited {
+    color: #AED9E0;
+}
+
+#menu li a:hover {
+    background: #FFA69E;
 }

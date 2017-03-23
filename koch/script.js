@@ -1,25 +1,23 @@
 var isPlay = true;
 var canvas, ctx;
+var width = innerWidth, height = innerHeight;
 
 window.addEventListener("keypress", function(e) {
     isPlay = !isPlay;
 });
 
 window.addEventListener("load", function(e) {
-    canvas = document.getElementById("canvas");
+    canvas = document.getElementById("can");
+    canvas.width = width;
+    canvas.height = height;
     ctx = canvas.getContext("2d");
     init();
 });
 
 function init() {
-    alert("init");
-    ctx.fillStyle = '#1C86EE';
-    var x1 = 30;
-    var y1 = 40;
-    var r =  50;
-    var theta = 0.5;
-    ctx.moveTo(x1, y1);
-    ctx.lineTo(x1 + r * Math.cos(theta), y1 + r * Math.sin(theta));
+    ctx.strokeStyle = "#1C86EE";
+    ctx.moveTo(width/2, height/2-150);
+    ctx.lineTo(width/2+150, height/2);
     ctx.stroke();
     //draw();
 }
