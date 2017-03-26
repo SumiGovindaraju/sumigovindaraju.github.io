@@ -34,73 +34,196 @@ function templateToRNA() {
     for (i = 0; i < mRNA.length - 2; i++) {
         if (mRNA.charAt(i) !== ' ') {
             switch (mRNA.substring(i, i + 3)) {
-                case 'UUU' || 'UUC':
+                case 'UUU':
                     protein += 'Phe-';
                     break;
-                case 'UUA' || 'UUG' || 'CUU' || 'CUC' || 'CUA' || 'CUG':
+                case 'UUC':
+                    protein += 'Phe-';
+                    break;
+                case 'UUA':
                     protein += 'Leu-';
                     break;
-                case 'AUC' || 'AUU' || 'AUA':
+                case 'UUG':
+                    protein += 'Leu-';
+                    break;
+                case 'CUU':
+                    protein += 'Leu-';
+                    break;
+                case 'CUC':
+                    protein += 'Leu-';
+                    break;
+                case 'CUA':
+                    protein += 'Leu-';
+                    break;
+                case 'CUG':
+                    protein += 'Leu-';
+                    break;
+                case 'AUC':
+                    protein += 'Ile-';
+                    break;
+                case 'AUU':
+                    protein += 'Ile-';
+                    break;
+                case 'AUA':
                     protein += 'Ile-';
                     break;
                 case 'AUG':
                     protein += 'Start (Met)-';
                     break;
-                case 'GUU' || 'GUC' || 'GUA' || 'GUG':
+                case 'GUU':
                     protein += 'Val-';
                     break;
-                case 'UCU' || 'UCC' || 'UCA' || 'UCG':
+                case 'GUC':
+                    protein += 'Val-';
+                    break;
+                case 'GUA':
+                    protein += 'Val-';
+                    break;
+                case 'GUG':
+                    protein += 'Val-';
+                    break;
+                case 'UCU':
                     protein += 'Ser-';
                     break;
-                case 'CCU' || 'CCC' || 'CCA' || 'CCG':
+                case 'UCC':
+                    protein += 'Ser-';
+                    break;
+                case 'UCA':
+                    protein += 'Ser-';
+                    break;
+                case 'UCG':
+                    protein += 'Ser-';
+                    break;
+                case 'CCU':
                     protein += 'Pro-';
                     break;
-                case 'ACU' || 'ACC' || 'ACA' || 'ACG':
+                case 'CCC':
+                    protein += 'Pro-';
+                    break;
+                case 'CCA':
+                    protein += 'Pro-';
+                    break;
+                case 'CCG':
+                    protein += 'Pro-';
+                    break;
+                case 'ACU':
                     protein += 'Thr-';
                     break;
-                case 'GCU' || 'GCC' || 'GCA' || 'GCG':
+                case 'ACC':
+                    protein += 'Thr-';
+                    break;
+                case 'ACA':
+                    protein += 'Thr-';
+                    break;
+                case 'ACG':
+                    protein += 'Thr-';
+                    break;
+                case 'GCU':
                     protein += 'Ala-';
                     break;
-                case 'UAU' || 'UAC':
+                case 'GCC':
+                    protein += 'Ala-';
+                    break;
+                case 'GCA':
+                    protein += 'Ala-';
+                    break;
+                case 'GCG':
+                    protein += 'Ala-';
+                    break;
+                case 'UAU':
                     protein += 'Tyr-';
                     break;
-                case 'UAA' || 'UAG' || 'UGA':
+                case 'UAC':
+                    protein += 'Tyr-';
+                    break;
+                case 'UAA':
                     protein += 'Stop ';
                     break;
-                case 'CAU' || 'CAC':
+                case 'UAG':
+                    protein += 'Stop ';
+                    break;
+                case 'UGA':
+                    protein += 'Stop ';
+                    break;
+                case 'CAU':
                     protein += 'His-';
                     break;
-                case 'CAA' || 'CAG':
+                case 'CAC':
+                    protein += 'His-';
+                    break;
+                case 'CAA':
                     protein += 'Gln-';
                     break;
-                case 'AAU' || 'AAC':
+                case 'CAG':
+                    protein += 'Gln-';
+                    break;
+                case 'AAU':
                     protein += 'Asn-';
                     break;
-                case 'AAA' || 'AAG':
+                case 'AAC':
+                    protein += 'Asn-';
+                    break;
+                case 'AAA':
                     protein += 'Lys-';
                     break;
-                case 'GAU' || 'GAC':
+                case 'AAG':
+                    protein += 'Lys-';
+                    break;
+                case 'GAU':
                     protein += 'Asp-';
                     break;
-                case 'GAA' || 'GAG':
+                case 'GAC':
+                    protein += 'Asp-';
+                    break;
+                case 'GAA':
                     protein += 'Glu-';
                     break;
-                case 'UGC' || 'UGU':
+                case 'GAG':
+                    protein += 'Glu-';
+                    break;
+                case 'UGC':
+                    protein += 'Cys-';
+                    break;
+                case 'UGU':
                     protein += 'Cys-';
                     break;
                 case 'UGG':
                     protein += 'Trp-';
                     break;
-                case 'CGU' || 'CGC' || 'CGA' || 'CGG':
+                case 'CGU':
                     protein += 'Arg-';
                     break;
-                case 'AGU' || 'AGC':
+                case 'CGC':
+                    protein += 'Arg-';
+                    break;
+                case 'CGA':
+                    protein += 'Arg-';
+                    break;
+                case 'CGG':
+                    protein += 'Arg-';
+                    break;
+                case 'AGU':
                     protein += 'Ser-';
                     break;
-                case 'AGA' || 'AGG':
+                case 'AGC':
+                    protein += 'Ser-';
+                    break;
+                case 'AGA':
                     protein += 'Arg-';
                     break;
-                case 'GGU' || 'GGC' || 'GGA' || 'GGG':
+                case 'AGG':
+                    protein += 'Arg-';
+                    break;
+                case 'GGU':
+                    protein += 'Gly-';
+                    break;
+                case 'GGC':
+                    protein += 'Gly-';
+                    break;
+                case 'GGA':
+                    protein += 'Gly-';
+                    break;
+                case 'GGG':
                     protein += 'Gly-';
                     break;
             }
