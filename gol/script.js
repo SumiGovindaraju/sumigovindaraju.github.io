@@ -85,4 +85,9 @@ window.addEventListener("keypress", function(e) {
 
 window.addEventListener("click", function(e){
     block[Math.floor(proportionalWidth*e.clientX/width)][Math.floor(proportionalHeight*e.clientY/height)] = !block[Math.floor(proportionalWidth*e.clientX/width)][Math.floor(proportionalHeight*e.clientY/height)];
+    if (block[Math.floor(proportionalWidth*e.clientX/width)][Math.floor(proportionalHeight*e.clientY/height)])
+        ctx.fillStyle = "#000000";
+    else
+        ctx.fillStyle = "#ffffff";
+    ctx.fillRect(Math.floor(proportionalWidth*e.clientX/width) * cellWidth, Math.floor(proportionalHeight*e.clientY/height) * cellHeight, cellWidth, cellHeight);
 });
