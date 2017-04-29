@@ -80,7 +80,6 @@ function step() {
 
 window.addEventListener("keypress", function(e) {
     isPlay = !isPlay;
-    console.log("Pressed Key");
 });
 
 window.addEventListener("click", function(e){
