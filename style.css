@@ -2,16 +2,92 @@ body {
     background: #000000;
 }
 
+#menu {
+  background-color: #ffffff;
+  padding: 10px 0;
+  width: 50%;
+  margin: auto;
+}
+
 #menu ul {
     list-style-type: none;
-    margin: auto;
+    margin: 0;
     padding: 0;
-    overflow: hidden;
-    width: 50%;
+}
+
+#menu ul li {
+  display: inline-block;
+  position: relative;
+}
+
+#menu li ul {
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 200px;
+}
+
+#menu li li {
+  position: relative;
+  margin: 0;
+  display: block;
+}
+
+#menu li li ul {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  margin: 0;
+}
+
+#menu a {
+  line-height: 40px;
+  padding: 0 12px;
+  margin: 0 12px;
+}
+
+#menu a {
+  color: rgb(81, 38, 31);
+  text-decoration: none;
+  display: block;
+}
+
+#menu a:hover,
+#menu a:focus,
+#menu a:active {
+  color: rgb(50, 50, 50);
+}
+
+#menu li li a {
+    border-bottom:solid 1px rgb(200,50,50);
+    margin:0 10px;
+    padding:0;
+}
+
+#menu li li:last-child a {
+    border-bottom:none;
+}
+
+/* show arrows for dropdowns */
+nav li.dropdown > a {
+    background-image:url('../img/arrow-down.png');
+    background-position:right 20px;
+    background-repeat:no-repeat;
+}
+
+#menu li li.dropdown > a {
+    background-image:url('../img/arrow-right.png');
+    background-position:right 16px;
+    background-repeat:no-repeat;
+}
+
+ul.submenu {
+  display: none;
 }
 
 #content {
-    //background-color: #f1f1f1;
+    background-color: #ffffff;
     width: 50%;
     margin: auto;
     color: #AED9E0;
@@ -23,23 +99,4 @@ body {
 
 #content a:visited {
     color: #AED9E0;
-}
-#menu li {
-    float: left;
-}
-
-#menu li a {
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    color: #AED9E0;
-}
-
-#menu li a:visited {
-    color: #AED9E0;
-}
-
-#menu li a:hover {
-    background: #FFA69E;
 }

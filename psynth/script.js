@@ -10,7 +10,7 @@ function templateToRNA() {
         }
         else if (template.charAt(i).toLowerCase() == 't') {
             mRNA += 'A';
-            dna += 'A'
+            dna += 'A';
         }
         else if (template.charAt(i).toLowerCase() == 'g') {
             mRNA += 'C';
