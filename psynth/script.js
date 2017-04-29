@@ -20,19 +20,19 @@ function templateToRNA() {
             mRNA += 'G';
             dna += 'G';
         }
-        else if (template.charAt(i) == ' ') {
+        else if (template.charAt(i) == ' ' && mRNA.charAt(i) != '\n') {
             mRNA += ' ';
             dna += ' ';
         }
         else {
             isValid = false;
-            alert("Invalid Template DNA");
+            alert("Invalid Template DNA: " + template.charAt(i));
             break;
         }
     }
     var protein = '';
     for (i = 0; i < mRNA.length - 2; i++) {
-        if (mRNA.charAt(i) !== ' ') {
+        if (mRNA.charAt(i) != ' ' && mRNA.charAt(i) != '\n') {
             switch (mRNA.substring(i, i + 3)) {
                 case 'UUU':
                     protein += 'Phe-';
@@ -226,6 +226,8 @@ function templateToRNA() {
                 case 'GGG':
                     protein += 'Gly-';
                     break;
+                default:
+                    isValid = false;
             }
             i += 2;
         }
