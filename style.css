@@ -2,7 +2,7 @@ body {
     background: #000000;
 }
 
-a, li {
+a {
   color: #fff;
 }
 
@@ -93,4 +93,8 @@ ul.submenu {
     width: 100%;
     margin: auto;
     overflow: auto;
+}
+
+#content a {
+  color: #000;
 }
