@@ -9,12 +9,11 @@ $(document).ready(function() {
 });
 
 window.addEventListener("load", function() {
-  var rand = Math.random();
-  if (rand < 0.33) {
+  if (Math.random() < 0.5) {
       $('#menu').css('background-color', 'rgb(255, 100, 100)');
       $('#menu li ul').css('background-color', 'rgb(225, 75, 75)');
       $('#menu li li a').css('border-bottom', 'solid 1px rgb(200, 50, 50)');
-  } else if (rand < 0.66) {
+  } else if (Math.random() < 0.5) {
       $('#menu').css('background-color', 'rgb(100, 255, 100)');
       $('#menu li ul').css('background-color', 'rgb(75, 225, 75)');
       $('#menu li li a').css('border-bottom', 'solid 1px rgb(50, 200, 50)');
