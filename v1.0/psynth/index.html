@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Protein Synthesis</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    DNA Template Strand: <textarea name="template" type="text" class="template" id="template" value=""></textarea>
+    <input onclick="templateToRNA()" type="submit" value="Calculate" id="templateToRNA"/>
+    <br/><br/>
+    Complimentary DNA Strand: <textarea name="dna" type="text" class="dna" id="dna" value="" disabled="disabled"></textarea><br/><br/>
+    Complimentary mRNA Strand: <textarea name="mRNA" type="text" class="mRNA" id="mRNA" value="" disabled="disabled"></textarea><br/><br/>
+    Protein (from mRNA): <textarea name="protein" type="text" class="protein" id="protein" value="" disabled="disabled"></textarea>
+    <button>Hide</button>
+</body>
+</html>
