@@ -17,7 +17,7 @@
                 fjs.parentNode.insertBefore(js, fjs);
             } (document, 'script', 'facebook-jssdk'));
         </script>
-        <div 
+        <div id="FacebookFeed"
             class="fb-page" 
             data-href="https://www.facebook.com/team254robotics" 
             data-tabs="timeline,events,messages" 
@@ -31,8 +31,16 @@
                 <a href="https://www.facebook.com/team254robotics">Team 254: The Cheesy Poofs</a>
             </blockquote>
         </div>
-        <div>
+        <div id="TwitterFeed">
             <a class="twitter-timeline" data-height="500" data-width="340" href="https://twitter.com/team254">Tweets by team254</a>
         </div>
+        <div id="InstagramFeed">hi</div>
+
+        <style>
+            #FacebookFeed, #TwitterFeed, #InstagramFeed {
+                display: inline-block;
+                margin-left: 10px;
+            }
+        </style>
     </body>
 </html>
