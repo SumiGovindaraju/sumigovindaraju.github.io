@@ -9,6 +9,7 @@
 // } (document, 'script', 'facebook-jssdk'));
 
 function loadJSON(url) {
+    console.log('starting');
     var xmlhttp;
 
     if (window.XMLHttpRequest) {
@@ -18,6 +19,7 @@ function loadJSON(url) {
     }
 
     xmlhttp.onreadystatechange = function() {
+        console.log('xmlhttp state changed');
         if (xmlhttp.readyState == 4) {
             if (xmlhttp.status == 200) {
                 document.getElementById("myBody").innerHTML = xmlhttp.responseText;
@@ -32,6 +34,7 @@ function loadJSON(url) {
     
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
+    console.log('request sent');
 }
 
 loadJSON('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=team254');
