@@ -1,29 +1,40 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>@team254</title>
+        <title>Social Media</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <script src="test.js"></script>
+        <link rel="stylesheet" href="test.css"/>
     </head>
-    <body id="myBody">
-        <div id="fb-root"></div>
-        <div id="FacebookFeed"
-            class="fb-page" 
-            data-href="https://www.facebook.com/team254robotics" 
-            data-tabs="timeline,events,messages" 
-            data-small-header="true" 
-            data-adapt-container-width="true" 
-            data-hide-cover="true" 
-            data-show-facepile="false">
-            <blockquote 
-                cite="https://www.facebook.com/team254robotics" 
-                class="fb-xfbml-parse-ignore">
-                <a href="https://www.facebook.com/team254robotics">Team 254: The Cheesy Poofs</a>
-            </blockquote>
+    <body>
+        <div>
+            <div id="tabs">
+                <ul>
+                    <li class="TwitterTab"><img src="Twitter_Logo_White_On_Blue.png"/>@team254</li>
+                    <li class="FacebookTab"><img src="FB-f-Logo__blue_1024.png"/>@team254robotics</li>
+                    <li class="InstagramTab"><img src="glyph-logo_May2016.png"/>@team254</li>
+                </ul>
+            </div>
+            <div id="TwitterFeed">
+                <a class="twitter-timeline" data-height="500" data-width="340" href="https://twitter.com/team254">Tweets by team254</a>
+            </div>
+            <div id="fb-root"></div>
+            <div id="FacebookFeed"
+                class="fb-page" 
+                data-href="https://www.facebook.com/team254robotics" 
+                data-tabs="timeline,events,messages" 
+                data-small-header="true" 
+                data-adapt-container-width="true" 
+                data-hide-cover="true" 
+                data-show-facepile="false">
+                <blockquote 
+                    cite="https://www.facebook.com/team254robotics" 
+                    class="fb-xfbml-parse-ignore">
+                    <a href="https://www.facebook.com/team254robotics">Team 254: The Cheesy Poofs</a>
+                </blockquote>
+            </div>
+            <div id="InstagramFeed">hi</div>
         </div>
-        <div id="TwitterFeed">
-            <a class="twitter-timeline" data-height="500" data-width="340" href="https://twitter.com/team254">Tweets by team254</a>
-        </div>
-        <div id="InstagramFeed"></div>
     </body>
 </html>
