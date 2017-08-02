@@ -8,13 +8,14 @@
     display: inline-block;
 }
 
-.TwitterScreenName, .FacebookScreenName, .InstagramScreenName {
+.screenName {
     display: inline-block;
 }
 
-.TwitterLogo, .FacebookLogo, .InstagramLogo {
+.logo {
     width: 29px;
     height: 29px;
+    vertical-align: middle;
     padding: 15px 15px 15px 15px;
     display: inline-block;
 }
