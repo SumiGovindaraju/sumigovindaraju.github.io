@@ -54,7 +54,7 @@
 
 $(document).ready(function() {
     $.ajax({
-        url: 'http://instagram.com/team254/media',
+        url: 'https://instagram.com/team254/media',
         dataType: 'jsonp',
         success: function(data){
             console.log(data);
