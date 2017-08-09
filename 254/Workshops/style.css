@@ -46,7 +46,7 @@
     html, body {
         margin: 0;
         padding: 0; 
-        background-image: url("https://cdn.pixabay.com/photo/2015/06/08/15/22/cityscape-802041_1280.jpg");
+        background-image: url("cityscape-802041_1280.jpg");
         background-repeat: no-repeat;
         background-size: 100%;
     }
@@ -62,9 +62,32 @@
         font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
     }
 
+    .icons {
+        display: inline-block; 
+        float: right;
+    }
+
+    .navbar {
+        display: inline-block;
+        float: right;
+        margin-right: 15px;
+    }
+
+    .navbar img {
+        width: 39px; 
+        height: 39px; 
+        display: inline-block; 
+        float: right; 
+        margin-top: 15px;
+    }
+
+    .nav {
+        background-color: rgb(255, 100, 100);
+    }
+
     .social {
         display: inline-block;
-        margin: 15px 250px 0px 0px;
+        margin: 15px 200px 0px 0px;
         float: right;
     }
 
@@ -74,11 +97,6 @@
         margin-right: 7px;
         width: 39px;
         height: 39px;
-    }
-
-    .navbar {
-        display: inline-block;
-        float: right;
     }
 
     #body {
