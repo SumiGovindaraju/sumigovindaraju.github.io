@@ -1,0 +1,90 @@
+@media screen and (min-width:300px) and (max-width:736px) {
+    html, body {
+        margin: 0;
+        padding: 0; 
+        background-image: url("https://cdn.pixabay.com/photo/2015/06/08/15/22/cityscape-802041_1280.jpg");
+    }
+
+    #header {
+        height: 50px;
+    }
+
+    h1 {
+        vertical-align: middle;
+        display: inline-block;
+        margin: 15px 0px 0px 20px;
+        font-size: 25px;
+        font-family: 'Impact', serif;
+    }
+
+    .social {
+        display: inline-block;
+        margin: 15px 0px 0px 0px;
+        float: right;
+    }
+
+    .social img {
+        vertical-align: middle;
+        display: inline-block;
+        margin-right: 7px;
+        width: 30px;
+        height: 30px;
+    }
+
+    #body {
+        width: 150px;
+        background-color: rgb(109, 125, 132);
+    }
+
+    #body p {
+        word-wrap: break-word;
+        font-family: 'Georgia', serif;
+    }
+}
+
+@media screen and (min-width:737px) {
+    html, body {
+        margin: 0;
+        padding: 0; 
+        background-image: url("https://cdn.pixabay.com/photo/2015/06/08/15/22/cityscape-802041_1280.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    #header {
+        height: 50px;
+    }
+
+    h1 {
+        vertical-align: middle;
+        display: inline-block;
+        margin: 15px 0px 0px 250px;
+        font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+    }
+
+    .social {
+        display: inline-block;
+        margin: 15px 250px 0px 0px;
+        float: right;
+    }
+
+    .social img {
+        vertical-align: middle;
+        display: inline-block;
+        margin-right: 7px;
+        width: 39px;
+        height: 39px;
+    }
+
+    .navbar {
+        display: inline-block;
+        float: right;
+    }
+
+    #body {
+        width: 500px;
+        margin: 150px auto 0px auto;
+        word-wrap: break-word;
+        font-family: 'Georgia', serif;
+    }
+}
