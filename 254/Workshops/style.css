@@ -1,126 +1,80 @@
-/* @media screen and (min-width:300px) and (max-width:736px) {
-    html, body {
-        margin: 0;
-        padding: 0; 
-        background-image: url("https://cdn.pixabay.com/photo/2015/06/08/15/22/cityscape-802041_1280.jpg");
-    }
+html, body {
+	margin: 0;
+	padding: 0;
+	background-image: url("cityscape-802041_1280.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	overflow: hidden;
+}
 
-    #header {
-        height: 50px;
-    }
+#header {
+	height: 50px;
+}
 
-    h1 {
-        vertical-align: middle;
-        display: inline-block;
-        margin: 15px 0px 0px 20px;
-        font-size: 25px;
-        font-family: 'Impact', serif;
-    }
+h1 {
+	vertical-align: middle;
+	display: inline-block;
+	margin: 15px 0px 0px 250px;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+}
 
-    .social {
-        display: inline-block;
-        margin: 15px 0px 0px 0px;
-        float: right;
-    }
+.icons {
+	display: inline-block;
+	float: right;
+}
 
-    .social img {
-        vertical-align: middle;
-        display: inline-block;
-        margin-right: 7px;
-        width: 30px;
-        height: 30px;
-    }
+.navbar {
+	background-color: rgb(255, 100, 100);
+	display: inline-block;
+	float: right;
+	height: 100%;
+}
 
-    #body {
-        width: 150px;
-        background-color: rgb(109, 125, 132);
-    }
+.navbar img {
+	width: 39px;
+	height: 39px;
+	display: inline-block;
+	float: right;
+	margin-top: 15px;
+}
 
-    #body p {
-        word-wrap: break-word;
-        font-family: 'Georgia', serif;
-    }
-} */
+.nav {
+	background-color: rgb(255, 100, 100);
+	height: 1000px;
+	width: 250px;
+}
 
-/* @media screen and (min-width:737px) { */
-    html, body {
-        margin: 0;
-        padding: 0; 
-        background-image: url("cityscape-802041_1280.jpg");
-        background-repeat: no-repeat;
-        background-size: 100%;
-        overflow: hidden;
-    }
+.nav .top {
+	margin-top: 60px;
+}
 
-    #header {
-        height: 50px;
-    }
+.nav li {
+	list-style: none;
+	margin: 0px 45px 15px 15px;
+}
 
-    h1 {
-        vertical-align: middle;
-        display: inline-block;
-        margin: 15px 0px 0px 250px;
-        font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
-    }
+.nav li a {
+	text-decoration: none;
+	color: white;
+}
 
-    .icons {
-        display: inline-block; 
-        float: right;
-    }
+.social {
+	display: inline-block;
+	margin: 15px 250px 0px 0px;
+	float: right;
+}
 
-    .navbar {
-        background-color: rgb(255, 100, 100);        
-        display: inline-block;
-        float: right;
-        height: 100%;
-    }
+.social img {
+	vertical-align: middle;
+	display: inline-block;
+	margin-right: 7px;
+	width: 39px;
+	height: 39px;
+}
 
-    .navbar img {
-        width: 39px; 
-        height: 39px; 
-        display: inline-block; 
-        float: right; 
-        margin-top: 15px;
-    }
-
-    .nav {
-        background-color: rgb(255, 100, 100);
-        height: 1000px;
-        width: 250px;
-    }
-
-    .nav .top {
-        margin-top: 60px;
-    }
-    
-    .nav li {
-        list-style: none;
-        margin: 0px 45px 15px 15px;
-    }
-
-    .nav li a {
-        text-decoration: none;
-        color: white;       
-    }
-
-    .social {
-        display: inline-block;
-        margin: 15px 250px 0px 0px;
-        float: right;
-    }
-
-    .social img {
-        vertical-align: middle;
-        display: inline-block;
-        margin-right: 7px;
-        width: 39px;
-        height: 39px;
-    }
-
-    #body {
-        width: 500px;
-        margin: 150px auto 0px auto;
-        word-wrap: break-word;
-        font-family: 'Georgia', serif;
-    }
-/* } */
+#body {
+	width: 500px;
+	margin: 150px auto 0px auto;
+	word-wrap: break-word;
+	font-family: 'Georgia', serif;
+}
