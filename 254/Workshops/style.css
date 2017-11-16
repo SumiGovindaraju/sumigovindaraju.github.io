@@ -24,7 +24,6 @@ body {
 }
 
 #menu ul {
-    list-style-type: none;
     margin: 0;
     padding: 0;
 }
@@ -39,7 +38,6 @@ body {
     margin: 0 12px;
     color: #fff;
     text-decoration: none;
-    display: block;
 }
 
 #menu a:hover,
@@ -58,4 +56,5 @@ body {
 
 #content img {
     width: 25%;
+    margin: 1%;
 }
