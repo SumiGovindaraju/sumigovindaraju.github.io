@@ -1,80 +1,61 @@
-html, body {
-	margin: 0;
-	padding: 0;
-	background-image: url("cityscape-802041_1280.jpg");
-	background-repeat: no-repeat;
-	background-size: 100%;
-	overflow: hidden;
+* {
+    font-family: monospace;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: #000000;
+    height: 100%;
 }
 
 #header {
-	height: 50px;
+    color: #fff;
+    text-align: center;
 }
 
-h1 {
-	vertical-align: middle;
-	display: inline-block;
-	margin: 15px 0px 0px 250px;
-	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+#menu {
+    padding: 10px 0;
+    width: 80%;
+    margin: auto;
+    background-color: rgb(255, 100, 100);
 }
 
-.icons {
-	display: inline-block;
-	float: right;
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.navbar {
-	background-color: rgb(255, 100, 100);
-	display: inline-block;
-	float: right;
-	height: 100%;
+#menu ul li {
+    display: inline-block;
 }
 
-.navbar img {
-	width: 39px;
-	height: 39px;
-	display: inline-block;
-	float: right;
-	margin-top: 15px;
+#menu a {
+    line-height: 40px;
+    padding: 0 12px;
+    margin: 0 12px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
 }
 
-.nav {
-	background-color: rgb(255, 100, 100);
-	height: 1000px;
-	width: 250px;
+#menu a:hover,
+#menu a:focus,
+#menu a:active {
+    color: rgb(50, 50, 50);
 }
 
-.nav .top {
-	margin-top: 60px;
+#content {
+    background-color: #fff;
+    width: 80%;
+    margin: auto;
+    overflow: auto;
+    text-align: center;
 }
 
-.nav li {
-	list-style: none;
-	margin: 0px 45px 15px 15px;
-}
-
-.nav li a {
-	text-decoration: none;
-	color: white;
-}
-
-.social {
-	display: inline-block;
-	margin: 15px 250px 0px 0px;
-	float: right;
-}
-
-.social img {
-	vertical-align: middle;
-	display: inline-block;
-	margin-right: 7px;
-	width: 39px;
-	height: 39px;
-}
-
-#body {
-	width: 500px;
-	margin: 150px auto 0px auto;
-	word-wrap: break-word;
-	font-family: 'Georgia', serif;
+#content img {
+    width: 25%;
 }
