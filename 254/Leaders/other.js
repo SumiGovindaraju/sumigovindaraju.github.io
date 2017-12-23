@@ -11,6 +11,7 @@ $(document).ready(function() {
     $('#2008-2009').hide();
     $('#2007-2008').hide();
     $('#2005-2006').hide();
+    $('#2003-2004').hide();
 });
 
 function showLeaders(year) {
