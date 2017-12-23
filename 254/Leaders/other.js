@@ -9,6 +9,7 @@ $(document).ready(function() {
     $('#2010-2011').hide();
     $('#2009-2010').hide();
     $('#2008-2009').hide();
+    $('#2007-2008').hide();
 });
 
 function showLeaders(year) {
