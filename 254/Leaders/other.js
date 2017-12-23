@@ -6,6 +6,7 @@ $(document).ready(function() {
     $('#2013-2014').hide();
     $('#2012-2013').hide();
     $('#2011-2012').hide();
+    $('#2010-2011').hide();
 });
 
 function showLeaders(year) {
