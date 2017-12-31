@@ -62,6 +62,7 @@
 	<link href="https://www.team254.com/?p=80" rel="shortlink">
 	<link href="https://www.team254.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.team254.com%2Fsponsors%2F" rel="alternate" type="application/json+oembed">
 	<link href="https://www.team254.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.team254.com%2Fsponsors%2F&amp;format=xml" rel="alternate" type="text/xml+oembed">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="preheader normalpage">
@@ -204,7 +205,7 @@
 
                             <div class="item">
                                 <div class="sponsor-column">
-                                    <img src="https://media.team254.com/sponsors/2016/Innovationfirst_logo.jpg" alt="Innovation First Logo" style="width: 240px; margin: auto;">
+                                    <img src="https://media.team254.com/2017/12/8e24079a-IFI_Logo.png" alt="Innovation First Logo" style="width: 240px; margin: auto;">
                                 </div>
                                 <div class="sponsor-column">
                                     <p class="sponsor-title" style="margin-top: 12%;">Innovation First International, Inc.</p>
@@ -222,12 +223,12 @@
 
                         <!-- Left and right controls -->
                         <a class="left carousel-control" href="#gold-sponsors" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                            <!-- <span class="sr-only">Previous</span> -->
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            <span class="sr-only">Previous</span>
                         </a>
                         <a class="right carousel-control" href="#gold-sponsors" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                            <!-- <span class="sr-only">Next</span> -->
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <span class="sr-only">Next</span>
                         </a>
                     </div>
 
@@ -281,12 +282,12 @@
 
                         <!-- Left and right controls -->
                         <a class="left carousel-control" href="#silver-sponsors" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                            <!-- <span class="sr-only">Previous</span> -->
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            <span class="sr-only">Previous</span>
                         </a>
                         <a class="right carousel-control" href="#silver-sponsors" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                            <!-- <span class="sr-only">Next</span> -->
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <span class="sr-only">Next</span>
                         </a>
                     </div>
 
@@ -320,12 +321,12 @@
 
                         <!-- Left and right controls -->
                         <a class="left carousel-control" href="#blue-sponsors" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                            <!-- <span class="sr-only">Previous</span> -->
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            <span class="sr-only">Previous</span>
                         </a>
                         <a class="right carousel-control" href="#blue-sponsors" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                            <!-- <span class="sr-only">Next</span> -->
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <span class="sr-only">Next</span>
                         </a>
                     </div>
                 </div>
@@ -420,14 +421,20 @@
         display: block;
     }
     .carousel-control {
-        top: 49%;
-        left: -2px;
+        background: none;
+        color: #808080;
+        margin-top: 5px;
+        margin-left: -24px;
+    }
+    .carousel-control:hover {
+        color: #000;
     }
     .carousel-control:focus {
-        opacity: 0;
+        color: #808080;
     }
     .carousel-control.right {
-        right: -2px;
+        margin-left: 0px;
+        margin-right: -24px;
     }
 </style>
 
@@ -435,6 +442,10 @@
     $(document).ready(function() {
         $('.carousel').each(function() {
             $(this).carousel();
+        });
+
+        $('.carousel-control').click(function() {
+            $(this).blur();
         });
     });
 </script>
