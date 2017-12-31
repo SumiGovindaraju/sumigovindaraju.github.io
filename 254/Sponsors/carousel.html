@@ -140,7 +140,7 @@
                 </ul>
                 
                 <div class="tab-content"> 
-                    <div id="gold-sponsors" class="carousel slide tab-pane fade in active" data-ride="carousel" data-interval="5000" data-pause="hover">
+                    <div id="gold-sponsors" class="carousel slide tab-pane fade in active" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
                             <li data-target="#gold-sponsors" data-slide-to="0" class="active"></li>
@@ -231,7 +231,7 @@
                         </a>
                     </div>
 
-                    <div id="silver-sponsors" class="carousel slide tab-pane fade" data-ride="carousel" data-interval="5000" data-pause="hover">
+                    <div id="silver-sponsors" class="carousel slide tab-pane fade" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
                             <li data-target="#silver-sponsors" data-slide-to="0" class="active"></li>
@@ -290,7 +290,7 @@
                         </a>
                     </div>
 
-                    <div id="blue-sponsors" class="carousel slide tab-pane fade" data-ride="carousel" data-interval="5000" data-pause="hover">
+                    <div id="blue-sponsors" class="carousel slide tab-pane fade" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
                             <li data-target="#blue-sponsors" data-slide-to="0" class="active"></li>
@@ -430,3 +430,11 @@
         right: -2px;
     }
 </style>
+
+<script>
+    $(document).ready(function() {
+        $('.carousel').each(function() {
+            $(this).carousel();
+        });
+    });
+</script>
