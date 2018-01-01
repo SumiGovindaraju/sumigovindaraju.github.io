@@ -1,5 +1,5 @@
 // Define some variables used to remember state.
-var playlistId, nextPageToken, prevPageToken;
+var playlistId, playlistName, nextPageToken, prevPageToken;
 
 // After the API loads, call a function to get the uploads playlist ID.
 function handleAPILoaded() {
@@ -10,12 +10,13 @@ function handleAPILoaded() {
 // list of videos uploaded to the currently authenticated user's channel.
 function requestUserUploadsPlaylistId() {
   // See https://developers.google.com/youtube/v3/docs/channels/list
-  var request = gapi.client.youtube.channels.list({
+  var request = gapi.client.youtube.playlists.list({
     mine: true,
-    part: 'contentDetails'
+    part: 'snippet,contentDetails'
   });
   request.execute(function(response) {
-    playlistId = response.result.items[0].contentDetails.relatedPlaylists.uploads;
+    playlistId = response.result.items[0].id;
+    playlistName = response.result.items[0].snippet.title;
     requestVideoPlaylist(playlistId);
   });
 }
