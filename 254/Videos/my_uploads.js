@@ -1,5 +1,6 @@
 // Define some variables used to remember state.
 var playlistId, playlistName, nextPageToken, prevPageToken;
+var data = {};
 
 // After the API loads, call a function to get the uploads playlist ID.
 function handleAPILoaded() {
@@ -18,8 +19,10 @@ function requestUserUploadsPlaylistId() {
         for (var i = 0; i < response.result.items.length; i++) {
             playlistId = response.result.items[i].id;
             playlistName = response.result.items[i].snippet.title;
+            data[playlistName] = []
             requestVideoPlaylist(playlistId);
         }
+        console.log(data);
     });
 }
 
@@ -36,40 +39,20 @@ function requestVideoPlaylist(playlistId, pageToken) {
     }
     var request = gapi.client.youtube.playlistItems.list(requestOptions);
     request.execute(function(response) {
-        // Only show pagination buttons if there is a pagination token for the
-        // next or previous page of results.
-        nextPageToken = response.result.nextPageToken;
-        var nextVis = nextPageToken ? 'visible' : 'hidden';
-        $('#next-button').css('visibility', nextVis);
-        prevPageToken = response.result.prevPageToken
-        var prevVis = prevPageToken ? 'visible' : 'hidden';
-        $('#prev-button').css('visibility', prevVis);
-
         var playlistItems = response.result.items;
         if (playlistItems) {
-        $.each(playlistItems, function(index, item) {
-            displayResult(item.snippet);
-        });
+            $.each(playlistItems, function(index, item) {
+                var title = item.snippet.title;
+                var videoId = item.snippet.resourceId.videoId;
+                var description = item.snippet.description;
+                data[playlistName][index] = {
+                    "youtube_code": videoId,
+                    "name": title,
+                    "description": description
+                };
+            });
         } else {
             $('#video-container').html('Sorry you have no uploaded videos');
         }
     });
-}
-
-// Create a listing for a video.
-function displayResult(videoSnippet) {
-    var title = videoSnippet.title;
-    var videoId = videoSnippet.resourceId.videoId;
-    var videoDescription = videoSnippet.description;
-    $('#video-container').append('<p>' + playlistName + ' - ' + title + ' - ' + videoDescription + ' - ' + videoId + '</p>');
-}
-
-// Retrieve the next page of videos in the playlist.
-function nextPage() {
-    requestVideoPlaylist(playlistId, nextPageToken);
-}
-
-// Retrieve the previous page of videos in the playlist.
-function previousPage() {
-    requestVideoPlaylist(playlistId, prevPageToken);
 }
