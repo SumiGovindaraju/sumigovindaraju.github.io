@@ -4,12 +4,12 @@
 // you need to register your own client ID.
 var OAUTH2_CLIENT_ID = '807772363523-qli6ncmk433a7lieip7otn371j0vti68.apps.googleusercontent.com';
 var OAUTH2_SCOPES = [
-  'https://www.googleapis.com/auth/youtube'
+  'https://www.googleapis.com/auth/youtube.readonly'
 ];
 
 // Upon loading, the Google APIs JS client automatically invokes this callback.
 googleApiClientReady = function() {
-  gapi.auth.init(function() {
+  gapi.auth2.init(function() {
     window.setTimeout(checkAuth, 1);
   });
 }
@@ -20,14 +20,14 @@ googleApiClientReady = function() {
 // succeeds with no user intervention. Otherwise, it fails and the
 // user interface that prompts for authorization needs to display.
 function checkAuth() {
-  gapi.auth.authorize({
+  gapi.auth2.authorize({
     client_id: OAUTH2_CLIENT_ID,
     scope: OAUTH2_SCOPES,
     immediate: true
   }, handleAuthResult);
 }
 
-// Handle the result of a gapi.auth.authorize() call.
+// Handle the result of a gapi.auth2.authorize() call.
 function handleAuthResult(authResult) {
   if (authResult && !authResult.error) {
     // Authorization was successful. Hide authorization prompts and show
@@ -39,7 +39,7 @@ function handleAuthResult(authResult) {
     // Make the #login-link clickable. Attempt a non-immediate OAuth 2.0
     // client flow. The current function is called when that flow completes.
     $('#login-link').click(function() {
-      gapi.auth.authorize({
+      gapi.auth2.authorize({
         client_id: OAUTH2_CLIENT_ID,
         scope: OAUTH2_SCOPES,
         immediate: false
