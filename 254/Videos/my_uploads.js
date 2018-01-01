@@ -16,6 +16,7 @@ function requestUserUploadsPlaylistId() {
         part: 'snippet,contentDetails'
     });
     request.execute(function(response) {
+        console.log(response.result);
         for (var i = 0; i < response.result.items.length; i++) {
             playlistId = response.result.items[i].id;
             playlistName = response.result.items[i].snippet.title;
