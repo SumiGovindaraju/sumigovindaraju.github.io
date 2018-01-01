@@ -16,12 +16,12 @@ function requestUserUploadsPlaylistId() {
         part: 'snippet,contentDetails'
     });
     request.execute(function(response) {
-        $.each(response.result.items, function(index, item) {
-            playlistId = item[index].id;
-            playlistName = item[index].snippet.title;
+        for (var i = 0; i < response.result.items.length; i++) {
+            playlistId = response.result.items[i].id;
+            playlistName = response.result.items[i].snippet.title;
             data[playlistName] = [];
             requestVideoPlaylist(playlistId, playlistName);
-        });
+        }
         console.log(data);
     });
 }
