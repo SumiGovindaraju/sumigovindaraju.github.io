@@ -23,7 +23,10 @@ function requestUserUploadsPlaylistId() {
             data[playlistName] = [];
             requestVideoPlaylist(playlistId, playlistName);
         }
-        console.log(data);
+        var file = new File("videoindex.json");   
+        file.open("w");
+        file.write(JSON.stringify(data));
+        file.close(); 
     });
 }
 
