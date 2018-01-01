@@ -16,44 +16,34 @@ function requestUserUploadsPlaylistId() {
         part: 'snippet,contentDetails'
     });
     request.execute(function(response) {
-        console.log(response.result);
-        for (var i = 0; i < response.result.items.length; i++) {
-            playlistId = response.result.items[i].id;
-            playlistName = response.result.items[i].snippet.title;
-            data[playlistName] = []
-            requestVideoPlaylist(playlistId);
-        }
+        $.each(response.result.items, function(index, item) {
+            playlistId = item[index].id;
+            playlistName = item[index].snippet.title;
+            data[playlistName] = [];
+            requestVideoPlaylist(playlistId, playlistName);
+        });
         console.log(data);
     });
 }
 
 // Retrieve the list of videos in the specified playlist.
-function requestVideoPlaylist(playlistId, pageToken) {
-    $('#video-container').html('');
+function requestVideoPlaylist(playlistId, playlistName) {
     var requestOptions = {
         playlistId: playlistId,
         part: 'snippet',
         maxResults: 10
     };
-    if (pageToken) {
-        requestOptions.pageToken = pageToken;
-    }
     var request = gapi.client.youtube.playlistItems.list(requestOptions);
     request.execute(function(response) {
-        var playlistItems = response.result.items;
-        if (playlistItems) {
-            $.each(playlistItems, function(index, item) {
-                var title = item.snippet.title;
-                var videoId = item.snippet.resourceId.videoId;
-                var description = item.snippet.description;
+        if (response.result.items) {
+            $.each(response.result.items, function(index, item) {
                 data[playlistName][index] = {
-                    "youtube_code": videoId,
-                    "name": title,
-                    "description": description
+                    "youtube_code": item.snippet.resourceId.videoId,
+                    "thumbnail_url": item.snippet.thumbnails.default.url,
+                    "name": item.snippet.title,
+                    "description": item.snippet.description
                 };
             });
-        } else {
-            $('#video-container').html('Sorry you have no uploaded videos');
         }
     });
 }
