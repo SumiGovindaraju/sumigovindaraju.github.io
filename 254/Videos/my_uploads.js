@@ -13,7 +13,8 @@ function requestUserUploadsPlaylistId() {
     // See https://developers.google.com/youtube/v3/docs/channels/list
     var request = gapi.client.youtube.playlists.list({
         mine: true,
-        part: 'snippet,contentDetails'
+        part: 'snippet,contentDetails',
+        maxResults: 50
     });
     request.execute(function(response) {
         for (var i = 0; i < response.result.items.length; i++) {
@@ -31,7 +32,7 @@ function requestVideoPlaylist(playlistId, playlistName) {
     var requestOptions = {
         playlistId: playlistId,
         part: 'snippet',
-        maxResults: 10
+        maxResults: 50
     };
     var request = gapi.client.youtube.playlistItems.list(requestOptions);
     request.execute(function(response) {
