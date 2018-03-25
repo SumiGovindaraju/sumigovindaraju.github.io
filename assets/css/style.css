@@ -1,0 +1,32 @@
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+i::before {
+    font-size: 40px;
+}
+
+.card {
+    margin-top: 5%; 
+    width: 25%;
+    margin-left: 6.25%; 
+    display: inline-block;
+}
+
+.card-text {
+    text-align: justify;
+}
+
+@media (max-width: 575.98px) {
+    .card {
+        display: block !important;
+        width: 87.5%;
+        margin-left: 6.25%;
+    }
+}
+
+@media (max-width: 767.98px) {}
+
+@media (max-width: 991.98px) {}
+
+@media (max-width: 1199.98px) {}
