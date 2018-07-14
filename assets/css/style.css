@@ -2,14 +2,14 @@
     color: #fff;
 }
 
-i::before {
-    font-size: 40px;
+.fa-linkedin, .fa-github {
+    font-size: 21px;
 }
 
 .card {
     margin-top: 5%; 
     width: 25%;
-    margin-left: 6.25%; 
+    margin-left: 15%; 
     display: inline-block;
 }
 
