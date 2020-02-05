@@ -1,5 +1,5 @@
 body {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
